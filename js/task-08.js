@@ -1,9 +1,6 @@
 const form = document.querySelector('.login-form');
 
-const elemets = {
-email: "",
-password: ""
-}
+
 
 
 form.addEventListener('submit', onFormSubmit)
@@ -16,13 +13,15 @@ function onFormSubmit (event) {
     (email.value === '' || password.value === '') {
         return alert ('Please fill all the fields!')
     }
+    const formElemets = {
+        login: `${email.value}`,
+        password: `${password.value}`
+        }
 
-    // const formEl = `Login: ${email.value} Password: ${password.value}`
+        console.log(formElemets)
 
     event.currentTarget.reset();
-   
-}
-console.log(elements)
+   }
 
 
-// console.log(newEl.formEl())
+
