@@ -13,7 +13,7 @@ function onInputBlur(event) {
     }
 return
 }
-console.log(input)
+
 
 // function onInputBlur(event) {
 //     if (event.target.value.length !== 6) {
