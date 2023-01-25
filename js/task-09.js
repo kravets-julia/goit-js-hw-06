@@ -11,7 +11,10 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
+
+
 function onchangeColor () {
-  refs.bodyEl.style.backgroundColor = getRandomHexColor();
-  refs.spanEl.textContent = refs.bodyEl.style.backgroundColor
+  const color = getRandomHexColor();
+  refs.bodyEl.style.backgroundColor = color;
+  refs.spanEl.textContent = color
 }
