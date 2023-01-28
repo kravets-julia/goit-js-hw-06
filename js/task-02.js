@@ -7,21 +7,23 @@ const ingredients = [
   'Condiments',
 ];
 
-console.log(ingredients)
+// console.log(ingredients)
 
 const ingredientsEl = document.getElementById ('ingredients');
 
-const array = [];
+// const array = [];
 
-for (let i = 0; i < ingredients.length; i+=1) {
-const liEl = document.createElement('li')
-    liEl.textContent = ingredients[i];
-    liEl.classList.add ('item');
+// for (let i = 0; i < ingredients.length; i+=1) 
 
-array.push(liEl)
-}
+ const listContent = ingredients. map((ingredients) => {
+ let liEl = document.createElement('li');
+      liEl.textContent = ingredients;
+       liEl.classList.add ('item');
+       return liEl
+      })
+   
 
-ingredientsEl.append(...array)
+ingredientsEl.append(...listContent)
 
 console.log(ingredientsEl)
 
